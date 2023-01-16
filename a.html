@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+	<title>hello</title>
+	<script>
+		function check()
+			{
+				var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+
+
+if((name=="")||(!(isNaN(name))))
+{
+
+alert("please enter the correct name");
+
+document.getElementById("name").focus();
+}
+else if((isNaN(phone))||(phone.length<10))
+{
+alert("enter valid phone")
+}
+else if((document.reg.gender[0].checked==false)&&(document.reg.gender[1].checked==false))
+{
+alert("please enter the correct gender");
+}
+else if(document.reg.color.selectedIndex="")
+{
+alert("please enter the correct q");
+}
+else{
+      x=confirm("you enter correct data")
+      if(x)
+      return true
+     }
+     return false
+      
+			}
+	</script>
+</head>
+<body bgcolor="yellow">
+	<h1><center>REGISTRATION PAGE</center></h1>
+        <hr>
+        <form name="reg" method="POST" action="reg.php">
+        	<table align="center">
+        		<tr>
+        		     <td><label>name</label></td>
+        		     <td><input type="text" name="name" id="name" /></td>
+        		</tr>
+        		<tr>
+        		     <td><label>phone</label></td>
+        		     <td><input type="text" name="phone" id="phone" /></td>
+        		</tr>
+        		
+        		<tr>
+        		     <td><label>gender</label></td>
+        		     <td><input type="radio" name="gender" id="gender" value="male"/>male</td>
+        		      <td><input type="radio" name="gender" id="gender" value="female"/>female</td>
+        		</tr>
+        		
+        		<tr>
+        		     <td><label>language</label></td>
+        		     <td><input type="checkbox" name="language" id="language" value="malyalam"/>malayalam</td>
+        		     <td><input type="checkbox" name="language" id="language" value="hindi"/>hindi</td>
+        		     <td><input type="checkbox" name="language" id="language" value="english"/>english</td>
+        		</tr>
+        		<tr>
+        		     <td><label>qualificaton</label></td>
+        		     <td><select name="color">
+        		          <option>btech</option>
+        		          <option selected>10th</option>
+        		          <option>diploma</option>
+        		          <option>mtech</option>
+        		          <option>12th</option>
+        		          </select></td>
+        		</tr>
+        		
+        		
+        		<tr>
+        		     <td><label>name</label></td>
+        		     <td><textarea name="cname" id="cname" /></textarea></td>
+        		</tr>
+        	
+        	</table>
+        	                   
+        		<center><input type="submit" value="submit" onclick="return check()"/>
+        		<input type="reset" value="reset"/></center>
+        </form>        	
+</body>
+</html>
